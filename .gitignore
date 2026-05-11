@@ -2,3 +2,5 @@
 *.o
 *.obj
 build/
+MSYS2/
+.vscode/
