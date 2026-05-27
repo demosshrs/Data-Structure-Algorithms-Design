@@ -1,0 +1,35 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c//**)",
+      "PowerShell(cmd /c \"dir D:\\\\DCS403 /a\")",
+      "PowerShell(cmd /c \"dir D:\\\\DCS403\\\\MSYS2\\\\mingw64\\\\bin\\\\g++.exe D:\\\\DCS403\\\\MSYS2\\\\ucrt64\\\\bin\\\\g++.exe D:\\\\DCS403\\\\MSYS2\\\\usr\\\\bin\\\\g++.exe 2>nul\")",
+      "PowerShell(& \"D:\\\\DCS403\\\\MSYS2\\\\ucrt64\\\\bin\\\\g++.exe\" \"D:\\\\DCS403\\\\week2Encapsulation.cpp\" -o \"D:\\\\DCS403\\\\week2Encapsulation.exe\")",
+      "Bash(\"D:/DCS403/MSYS2/ucrt64/bin/g++.exe\" \"D:/DCS403/week2Encapsulation.cpp\" -o \"D:/DCS403/week2Encapsulation.exe\")",
+      "PowerShell(cmd /c '\"D:\\\\DCS403\\\\MSYS2\\\\ucrt64\\\\bin\\\\g++.exe\" \"D:\\\\DCS403\\\\week2Encapsulation.cpp\" -o \"D:\\\\DCS403\\\\week2Encapsulation.exe\" 2>&1')",
+      "PowerShell(cmd /c '\"D:\\\\DCS403\\\\MSYS2\\\\ucrt64\\\\bin\\\\g++.exe\" \"D:\\\\DCS403\\\\week2Encapsulation.cpp\" -o \"D:\\\\DCS403\\\\week2Encapsulation.exe\"' ; echo \"Exit: $LASTEXITCODE\")",
+      "PowerShell(Start-Process -FilePath \"D:\\\\DCS403\\\\MSYS2\\\\ucrt64\\\\bin\\\\g++.exe\" -ArgumentList '\"D:\\\\DCS403\\\\week2Encapsulation.cpp\"', '-o', '\"D:\\\\DCS403\\\\week2Encapsulation.exe\"' -Wait -NoNewWindow -RedirectStandardError \"C:\\\\Users\\\\demos\\\\AppData\\\\Local\\\\Temp\\\\gpp_err.txt\")",
+      "PowerShell(& \"D:\\\\DCS403\\\\week2Encapsulation.exe\")",
+      "PowerShell(Start-Process -FilePath \"D:\\\\DCS403\\\\MSYS2\\\\ucrt64\\\\bin\\\\g++.exe\" -ArgumentList '--version' -Wait -NoNewWindow -RedirectStandardOutput \"C:\\\\Users\\\\demos\\\\AppData\\\\Local\\\\Temp\\\\gpp_out.txt\" -RedirectStandardError \"C:\\\\Users\\\\demos\\\\AppData\\\\Local\\\\Temp\\\\gpp_err.txt\")",
+      "PowerShell(Start-Process -FilePath \"D:\\\\DCS403\\\\MSYS2\\\\ucrt64\\\\bin\\\\g++.exe\" -ArgumentList 'D:\\\\DCS403\\\\week2Encapsulation.cpp', '-o', 'D:\\\\DCS403\\\\week2Encapsulation.exe' -Wait -NoNewWindow -RedirectStandardOutput \"C:\\\\Users\\\\demos\\\\AppData\\\\Local\\\\Temp\\\\gpp_out.txt\" -RedirectStandardError \"C:\\\\Users\\\\demos\\\\AppData\\\\Local\\\\Temp\\\\gpp_err.txt\")",
+      "PowerShell(Start-Process -FilePath \"D:\\\\DCS403\\\\MSYS2\\\\ucrt64\\\\bin\\\\g++.exe\" -ArgumentList 'D:\\\\DCS403\\\\week2Encapsulation.cpp', '-o', 'C:\\\\Users\\\\demos\\\\AppData\\\\Local\\\\Temp\\\\test.exe' -Wait -NoNewWindow -RedirectStandardOutput \"C:\\\\Users\\\\demos\\\\AppData\\\\Local\\\\Temp\\\\gpp_out.txt\" -RedirectStandardError \"C:\\\\Users\\\\demos\\\\AppData\\\\Local\\\\Temp\\\\gpp_err.txt\")",
+      "PowerShell(Start-Process -FilePath \"D:\\\\DCS403\\\\MSYS2\\\\usr\\\\bin\\\\bash.exe\" -ArgumentList '-c', 'g++ /d/DCS403/week2Encapsulation.cpp -o /d/DCS403/week2Encapsulation.exe && echo SUCCESS || echo FAILED' -Wait -NoNewWindow -RedirectStandardOutput \"C:\\\\Users\\\\demos\\\\AppData\\\\Local\\\\Temp\\\\bash_out.txt\" -RedirectStandardError \"C:\\\\Users\\\\demos\\\\AppData\\\\Local\\\\Temp\\\\bash_err.txt\")",
+      "PowerShell(Start-Process -FilePath \"D:\\\\DCS403\\\\MSYS2\\\\usr\\\\bin\\\\bash.exe\" -ArgumentList '-c', 'export PATH=\"/ucrt64/bin:$PATH\"; g++ /d/DCS403/week2Encapsulation.cpp -o /d/DCS403/week2Encapsulation.exe && echo SUCCESS || echo FAILED' -Wait -NoNewWindow -RedirectStandardOutput \"C:\\\\Users\\\\demos\\\\AppData\\\\Local\\\\Temp\\\\bash_out.txt\" -RedirectStandardError \"C:\\\\Users\\\\demos\\\\AppData\\\\Local\\\\Temp\\\\bash_err.txt\")",
+      "PowerShell(cmd /c \"dir D:\\\\DCS403\\\\.vscode\")",
+      "Bash(g++ week3assignment *)",
+      "PowerShell(g++ d:\\\\DCS403\\\\week3assignment -o d:\\\\DCS403\\\\week3assignment_out.exe 2>&1)",
+      "PowerShell(Get-Command cl, g++, clang++ -ErrorAction SilentlyContinue)",
+      "PowerShell(Rename-Item \"d:\\\\DCS403\\\\week3assignment\" \"week3assignment.cpp\")",
+      "PowerShell(Rename-Item \"d:\\\\DCS403\\\\week3assignment2\" \"week3assignment2.cpp\")",
+      "PowerShell(Rename-Item \"d:\\\\DCS403\\\\week3assignment3\" \"week3assignment3.cpp\")",
+      "PowerShell(New-Item -ItemType Directory -Force \"d:\\\\DCS403\\\\build\\\\Debug\")",
+      "Read(//d/DCS403/**)",
+      "PowerShell(& \"D:\\\\DCS403\\\\MSYS2\\\\ucrt64\\\\bin\\\\g++.exe\" -g \"d:\\\\DCS403\\\\week3assignment.cpp\" -o \"d:\\\\DCS403\\\\build\\\\Debug\\\\outDebug.exe\" -static-libgcc -static-libstdc++ 2>&1)",
+      "Bash(\"D:/DCS403/MSYS2/ucrt64/bin/g++.exe\" -g \"d:/DCS403/week3assignment.cpp\" -o \"d:/DCS403/build/Debug/outDebug.exe\" -static-libgcc -static-libstdc++)",
+      "PowerShell($proc = Start-Process -FilePath \"D:\\\\DCS403\\\\MSYS2\\\\ucrt64\\\\bin\\\\g++.exe\" -ArgumentList \"-g\", \"d:\\\\DCS403\\\\week3assignment.cpp\", \"-o\", \"d:\\\\DCS403\\\\build\\\\Debug\\\\outDebug.exe\" -NoNewWindow -Wait -RedirectStandardError \"d:\\\\DCS403\\\\build\\\\err.txt\" -RedirectStandardOutput \"d:\\\\DCS403\\\\build\\\\out.txt\" -PassThru; \"Exit code: $\\($proc.ExitCode\\)\"; \"STDERR:\"; Get-Content \"d:\\\\DCS403\\\\build\\\\err.txt\"; \"STDOUT:\"; Get-Content \"d:\\\\DCS403\\\\build\\\\out.txt\")",
+      "PowerShell($proc = Start-Process -FilePath \"D:\\\\DCS403\\\\MSYS2\\\\ucrt64\\\\bin\\\\g++.exe\" -ArgumentList \"--version\" -NoNewWindow -Wait -RedirectStandardError \"d:\\\\DCS403\\\\build\\\\err.txt\" -RedirectStandardOutput \"d:\\\\DCS403\\\\build\\\\out.txt\" -PassThru; \"Exit: $\\($proc.ExitCode\\)\"; Get-Content \"d:\\\\DCS403\\\\build\\\\out.txt\"; Get-Content \"d:\\\\DCS403\\\\build\\\\err.txt\")",
+      "PowerShell($env:PATH = \"D:\\\\DCS403\\\\MSYS2\\\\ucrt64\\\\bin;D:\\\\DCS403\\\\MSYS2\\\\usr\\\\bin;\" + $env:PATH; $proc = Start-Process -FilePath \"D:\\\\DCS403\\\\MSYS2\\\\ucrt64\\\\bin\\\\g++.exe\" -ArgumentList \"-g\", \"d:\\\\DCS403\\\\week3assignment.cpp\", \"-o\", \"d:\\\\DCS403\\\\build\\\\Debug\\\\outDebug.exe\", \"-static-libgcc\", \"-static-libstdc++\" -NoNewWindow -Wait -RedirectStandardError \"d:\\\\DCS403\\\\build\\\\err.txt\" -RedirectStandardOutput \"d:\\\\DCS403\\\\build\\\\out.txt\" -PassThru; \"Exit: $\\($proc.ExitCode\\)\"; Get-Content \"d:\\\\DCS403\\\\build\\\\err.txt\"; Get-Content \"d:\\\\DCS403\\\\build\\\\out.txt\")",
+      "PowerShell(Rename-Item \"d:\\\\DCS403\\\\week4cpp\" \"week4cpp.cpp\")"
+    ]
+  }
+}
